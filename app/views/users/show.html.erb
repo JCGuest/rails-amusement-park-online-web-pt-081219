@@ -1,0 +1,7 @@
+<h1><%= @user.name %></h1><br>
+<h1>Height:<%= @user.height %></h1><br>
+<h1>Nausea Level:<%= @user.nausea %></h1><br>
+<h1>Happiness Level:<%= @user.happiness %></h1><br>
+<h1>Number of tickets:<%= @user.tickets %></h1><br>
+
+<%= link_to @user.name, user_path(@user) class:'navbar-brand' %>

@@ -1,0 +1,15 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f| %>
+<%= f.text_field :name, placeholder: "what is your name?" %>
+<%= f.text_field :height, placeholder: "what is your height in inches?" %>
+<%= f.text_field :happiness, placeholder: "what is your happiness level?" %>
+<%= f.text_field :nausea, placeholder: "what is your nausea level?" %>
+<%= f.text_field :tickets, placeholder: "how many tickets do you watn to buy?" %>
+<%= f.text_field :password, placeholder: "enter your password", type: "password" %>
+
+
+
+
+<%= f.submit %>
+<%end %>
+
