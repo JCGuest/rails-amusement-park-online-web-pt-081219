@@ -1,7 +1,20 @@
-<h1><%= @user.name %></h1><br>
-<h1>Height:<%= @user.height %></h1><br>
-<h1>Nausea Level:<%= @user.nausea %></h1><br>
-<h1>Happiness Level:<%= @user.happiness %></h1><br>
-<h1>Number of tickets:<%= @user.tickets %></h1><br>
+<p id="notice"><%= notice %></p>
 
-<%= link_to @user.name, user_path(@user) class:'navbar-brand' %>
+
+
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
+<div class="center">
+
+  <div class="info">
+    <p><strong>Name:</strong> <%= @user.name %></p>
+    <p><strong>Tickets:</strong> <%= @user.tickets %></p>
+    <p><strong>Mood:</strong>  <%= @user.mood %></p>
+    <p><strong>Height:</strong> <%= @user.height %> inches</p>
+    <p><%= link_to 'See attractions', attractions_path %></p>
+  </div>
+</div> 
